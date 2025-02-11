@@ -99,7 +99,7 @@ const ArtifactDetails = () => {
     </>
   );
   return (
-    <div className="bg-gray-100 flex flex-col justify-center items-center py-16 lg:px-0 px-3">
+    <div className=" flex flex-col justify-center items-center py-16 lg:px-0 px-3">
       <Helmet>
         <title>Artifact Details Page | Historical Artifacts</title>
       </Helmet>
@@ -109,7 +109,7 @@ const ArtifactDetails = () => {
         </>
       ) : (
         <>
-          <div className="max-w-5xl w-full bg-white/20 rounded-lg shadow-xl overflow-hidden">
+          <div className="max-w-5xl w-full bg-white/20 dark:bg-slate-800 rounded-lg shadow-xl overflow-hidden">
             {/* Image Section */}
             <div className="w-full h-full bg-gray-200 relative">
               <img
@@ -131,13 +131,13 @@ const ArtifactDetails = () => {
 
             {/* Content Section */}
             <div className="p-8">
-              <h1 className="text-3xl font-bold text-gray-800">
+              <h1 className="text-3xl font-bold dark:text-slate-100 text-gray-800">
                 {artifact?.artifactName}
               </h1>
-              <p className="mt-4 text-gray-600 leading-relaxed">
+              <p className="mt-4 text-gray-600 dark:text-slate-100 leading-relaxed">
                 {artifact?.historicalContext}
               </p>
-              <p className="mt-4 text-gray-600 leading-relaxed flex items-center gap-x-2">
+              <p className="mt-4 text-gray-600 dark:text-slate-100 leading-relaxed flex items-center gap-x-2">
                 Liked: <AiFillLike className="text-xl text-red-500 font-bold" />{" "}
                 <span className="text-red-500 font-bold">
                   {isLiked || artifact?.likes}
@@ -148,38 +148,50 @@ const ArtifactDetails = () => {
             {/* Metadata Section */}
             <div className="px-8 py-6 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-gray-500">Creation Date</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-100">
+                  Creation Date
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300 font-medium">
                   {artifact?.createdAt}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500">Discovered Date</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-300">
+                  Discovered Date
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300font-medium">
                   {artifact?.discoveredAt}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500">Material</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-300">
+                  Material
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300 font-medium">
                   {artifact?.artifactType}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500">Discovered By</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-300">
+                  Discovered By
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300 font-medium">
                   {artifact?.discoveredBy}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500">Present Location</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-300">
+                  Present Location
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300 font-medium">
                   {artifact?.presentLocation}
                 </p>
               </div>
               <div>
-                <p className="text-sm text-gray-500">Artifact Added By</p>
-                <p className="text-lg text-gray-800 font-medium">
+                <p className="text-sm text-gray-500 dark:text-slate-300">
+                  Artifact Added By
+                </p>
+                <p className="text-lg text-gray-800 dark:text-slate-300 font-medium">
                   {artifact?.addedBy?.name}
                 </p>
               </div>

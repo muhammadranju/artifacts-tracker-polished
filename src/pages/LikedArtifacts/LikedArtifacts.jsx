@@ -98,7 +98,7 @@ const LikedArtifacts = () => {
             {likedArtifacts?.map((artifact) => (
               <div
                 key={artifact.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+                className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
               >
                 <img
                   src={artifact.imageUrl}
@@ -106,10 +106,10 @@ const LikedArtifacts = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4 space-y-2">
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <h3 className="text-xl font-semibold dark:text-slate-100 text-gray-800">
                     {artifact.artifactName}
                   </h3>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2">
                     {artifact.historicalContext.length > 50
                       ? artifact.historicalContext.slice(0, 100) + "..."
                       : artifact.historicalContext}

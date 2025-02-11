@@ -203,7 +203,7 @@ const MyArtifacts = () => {
             {userArtifacts?.map((artifact) => (
               <div
                 key={artifact._id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 h-full"
+                className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 h-full"
               >
                 <img
                   src={artifact.imageUrl}
@@ -211,22 +211,22 @@ const MyArtifacts = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold text-gray-800">
+                  <h3 className="text-xl font-semibold dark:text-slate-100 text-gray-800">
                     {artifact.artifactName}
                   </h3>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2">
                     Type: {artifact.artifactType}
                   </p>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2">
                     Created At: {artifact.createdAt}
                   </p>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2">
                     Discovered At: {artifact.discoveredAt}
                   </p>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2">
                     Discovered By: {artifact.discoveredBy}
                   </p>
-                  <p className="text-gray-600 mt-2 flex items-center gap-x-2">
+                  <p className="text-gray-600 dark:text-slate-100 mt-2 flex items-center gap-x-2">
                     <SlLike /> {artifact.likes}
                   </p>
 
