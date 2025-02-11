@@ -75,7 +75,7 @@ const AllArtifacts = () => {
                 {artifacts?.map((artifact) => (
                   <div
                     key={artifact._id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
+                    className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
                   >
                     <img
                       src={artifact.imageUrl}
@@ -83,16 +83,16 @@ const AllArtifacts = () => {
                       className="w-full h-64 object-cover"
                     />
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-800">
+                      <h3 className="text-lg font-semibold dark:text-slate-100 text-gray-800">
                         {artifact.artifactName}
                       </h3>
-                      <p className="text-gray-600 mt-2">
+                      <p className="text-gray-600 dark:text-slate-100 mt-2">
                         {artifact.historicalContext.length > 50
                           ? artifact.historicalContext.slice(0, 100) + "..."
                           : artifact.historicalContext}
                       </p>
                       <div className="flex justify-between items-center mt-4">
-                        <span className="text-gray-700 font-medium flex items-center gap-x-2">
+                        <span className="text-gray-700 dark:text-slate-100 font-medium flex items-center gap-x-2">
                           <SlLike />
                           {artifact?.likes}
                         </span>
