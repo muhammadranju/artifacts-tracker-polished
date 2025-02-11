@@ -6,6 +6,7 @@ import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../context/AuthProvider";
 import { FaDeviantart } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Header = () => {
   const { user, signOut } = useContext(AuthContext);
@@ -21,9 +22,9 @@ const Header = () => {
   };
 
   return (
-    <header className="shadow-md sticky top-0 z-50 backdrop-blur-md bg-opacity-70 bg-white/70">
-      <nav className="w-11/12 lg:w-11/12 md:w-11/12 xl:container mx-auto flex justify-between items-center lg:pt-1   ">
-        <div className="navbar ">
+    <header className="shadow-md sticky top-0 z-50 backdrop-blur-md bg-opacity-70 bg-slate-100 dark:bg-slate-900">
+      <nav className="w-11/12 lg:w-11/12 md:w-11/12 xl:container mx-auto flex justify-between items-center lg:pt-1">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -33,7 +34,7 @@ const Header = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="h-5 w-5 text-gray-700 dark:text-gray-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -48,12 +49,12 @@ const Header = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-56 py-3 p-3 space-y-1 shadow"
+                className="menu menu-sm dropdown-content bg-slate-100 dark:bg-slate-800 text-gray-700 dark:text-gray-300 rounded-box z-[1] mt-3 w-56 py-3 p-3 space-y-1 shadow"
               >
                 <li>
                   <NavLink
                     to="/"
-                    className="text-gray-700 hover:text-blue-600 font-medium"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600"
                   >
                     Home
                   </NavLink>
@@ -61,7 +62,7 @@ const Header = () => {
                 <li>
                   <NavLink
                     to="/artifacts"
-                    className="text-gray-700 hover:text-blue-600 font-medium"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600"
                   >
                     All Artifacts
                   </NavLink>
@@ -71,7 +72,7 @@ const Header = () => {
                     <li>
                       <NavLink
                         to="/add-artifact"
-                        className="text-gray-700 hover:text-blue-600 font-medium"
+                        className="text-gray-700 dark:text-gray-300 hover:text-blue-600"
                       >
                         Add Artifact
                       </NavLink>
@@ -80,10 +81,10 @@ const Header = () => {
                       <a>My Profile</a>
                       <ul className="p-2 space-y-1 w-48">
                         <li>
-                          <NavLink to={"/my-artifacts"}>My Artifacts</NavLink>
+                          <NavLink to="/my-artifacts">My Artifacts</NavLink>
                         </li>
                         <li>
-                          <NavLink to={"/liked-artifacts"}>
+                          <NavLink to="/liked-artifacts">
                             Liked Artifacts
                           </NavLink>
                         </li>
@@ -100,7 +101,10 @@ const Header = () => {
                   className="flex items-center lg:text-3xl text-xl font-extrabold text-blue-600 -ml-4"
                 >
                   <FaDeviantart className="lg:text-4xl text-xl text-blue-600" />{" "}
-                  Artifacts<span className="text-gray-800">Tracker</span>
+                  Artifacts
+                  <span className="text-gray-800 dark:text-gray-200">
+                    Tracker
+                  </span>
                 </Link>
               </div>
             </div>
@@ -110,7 +114,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/"
-                  className="text-gray-700 hover:text-blue-600 font-medium"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium"
                 >
                   Home
                 </NavLink>
@@ -118,7 +122,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/artifacts"
-                  className="text-gray-700 hover:text-blue-600 font-medium"
+                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium"
                 >
                   All Artifacts
                 </NavLink>
@@ -128,20 +132,22 @@ const Header = () => {
                   <li>
                     <NavLink
                       to="/add-artifact"
-                      className="text-gray-700 hover:text-blue-600 font-medium"
+                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium"
                     >
                       Add Artifact
                     </NavLink>
                   </li>
                   <li>
                     <details>
-                      <summary>My Profile</summary>
+                      <summary className="text-gray-700 dark:text-gray-300">
+                        My Profile
+                      </summary>
                       <ul className="p-2 space-y-1 w-48">
                         <li>
-                          <NavLink to={"/my-artifacts"}>My Artifacts</NavLink>
+                          <NavLink to="/my-artifacts">My Artifacts</NavLink>
                         </li>
                         <li>
-                          <NavLink to={"/liked-artifacts"}>
+                          <NavLink to="/liked-artifacts">
                             Liked Artifacts
                           </NavLink>
                         </li>
@@ -158,7 +164,7 @@ const Header = () => {
                 <summary className="btn m-1 bg-transparent border-none hover:bg-transparent shadow-none">
                   <div className="flex items-center justify-start space-x-1">
                     <div
-                      className="dropdown bg-white/70 rounded-full  border-2 tooltip tooltip-bottom"
+                      className="dropdown bg-white/70 dark:bg-gray-800 rounded-full border-2 tooltip tooltip-bottom"
                       data-tooltip-id="my-tooltip"
                     >
                       <img
@@ -166,15 +172,17 @@ const Header = () => {
                           user.photoURL ||
                           "https://avatars.githubusercontent.com/u/80270685?v=4"
                         }
-                        className="lg:w-12 w-14  rounded-full    p-1"
+                        className="lg:w-12 w-14 rounded-full p-1"
                         alt=""
                       />
                     </div>
                     <div className="text-start lg:flex flex-col hidden">
-                      <p className="text-base ">
+                      <p className="text-base text-gray-800 dark:text-gray-200">
                         {user.displayName || "User Name"}
                       </p>
-                      <span className="text-xs">My Account</span>
+                      <span className="text-xs text-gray-600 dark:text-gray-400">
+                        My Account
+                      </span>
                     </div>
                   </div>
                   <div className="lg:block hidden">
@@ -186,14 +194,13 @@ const Header = () => {
                     </Tooltip>
                   </div>
                 </summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] lg:-ml-10 -ml-12 w-auto p-2 shadow">
+                <ul className="menu dropdown-content bg-base-100 dark:bg-gray-800 rounded-box z-[1] lg:-ml-10 -ml-12 w-auto p-2 shadow">
                   <li>
                     <button
                       onClick={handleLogout}
-                      className="btn mt-1 bg-red-600 text-white hover:bg-red-700 "
+                      className="btn mt-1 bg-red-600 text-white hover:bg-red-700"
                     >
-                      <IoIosLogOut className="text-xl font-bold" />
-                      Log Out
+                      <IoIosLogOut className="text-xl font-bold" /> Log Out
                     </button>
                   </li>
                 </ul>
@@ -201,20 +208,20 @@ const Header = () => {
             ) : (
               <>
                 <Link
-                  to={"/login"}
-                  className="border-2 border-gray-500/50 text-gray-800 py-3 rounded-lg hover:opacity-90 hover:shadow-lg transition-shadow w-fit px-5 "
+                  to="/login"
+                  className="border-2 border-gray-500/50 text-gray-800 dark:text-gray-300 py-3 rounded-lg hover:opacity-90 hover:shadow-lg transition-shadow w-fit px-5"
                 >
                   Login
                 </Link>
-
                 <Link
-                  to={"/register"}
+                  to="/register"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg shadow-lg hover:opacity-90 w-fit px-5 lg:flex hidden"
                 >
                   Register
                 </Link>
               </>
             )}
+            <ThemeToggle />
           </div>
         </div>
       </nav>
