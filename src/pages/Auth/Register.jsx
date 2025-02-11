@@ -152,17 +152,17 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100 flex items-center justify-center lg:px-0 px-3">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 dark:from-slate-900 via-white dark:via-slate-800 to-purple-100 dark:to-slate-900  flex items-center justify-center lg:px-0 px-3">
       <Helmet>
         <title>Register Page | Historical Artifacts</title>
       </Helmet>
-      <div className="bg-white shadow-2xl rounded-lg max-w-lg w-full p-8 sm:p-12">
+      <div className="bg-white dark:bg-slate-900 shadow-2xl rounded-lg max-w-lg w-full p-8 sm:p-12">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-extrabold text-gray-800">
+          <h1 className="text-3xl font-extrabold dark:text-white text-gray-800">
             Create Your Account
           </h1>
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-500 dark:text-slate-400 mt-2">
             Register to explore amazing artifacts!
           </p>
         </div>
@@ -173,7 +173,7 @@ const RegisterPage = () => {
           <div className="mb-6">
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium dark:text-gray-200 text-gray-700"
             >
               Full Name<span className="text-red-600">*</span>
             </label>
@@ -183,7 +183,7 @@ const RegisterPage = () => {
               placeholder="Enter your full name"
               value={formData.name}
               onChange={handleChange}
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+              className="mt-2 w-full px-4 py-3 border dark:bg-slate-800 dark:text-gray-200 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
             />
           </div>
 
@@ -191,7 +191,7 @@ const RegisterPage = () => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium dark:text-gray-200 text-gray-700"
             >
               Email Address<span className="text-red-600">*</span>
             </label>
@@ -201,7 +201,7 @@ const RegisterPage = () => {
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+              className="mt-2 w-full px-4 py-3 border dark:bg-slate-800 dark:text-gray-200 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
             />
           </div>
 
@@ -209,7 +209,7 @@ const RegisterPage = () => {
           <div className="mb-6">
             <label
               htmlFor="photoURL"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium dark:text-gray-200 text-gray-700"
             >
               Photo URL<span className="text-red-600">*</span>
             </label>
@@ -219,7 +219,7 @@ const RegisterPage = () => {
               placeholder="Enter your photo URL"
               value={formData.photoURL}
               onChange={handleChange}
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+              className="mt-2 w-full px-4 py-3 border dark:bg-slate-800 dark:text-gray-200 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
             />
           </div>
 
@@ -227,7 +227,7 @@ const RegisterPage = () => {
           <div className="mb-6 relative">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium dark:text-gray-200 text-gray-700"
             >
               Password<span className="text-red-600">*</span>
             </label>
@@ -237,7 +237,7 @@ const RegisterPage = () => {
               placeholder="Create a password"
               value={formData.password}
               onChange={handleChange}
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+              className="mt-2 w-full px-4 py-3 border dark:bg-slate-800 dark:text-gray-200 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
             />
             <button
               type="button"
@@ -265,7 +265,7 @@ const RegisterPage = () => {
         <div className="flex justify-center items-center space-x-4">
           <button
             onClick={handelGoogleRegister}
-            className="bg-gray-200  hover:bg-gray-300 w-full text-center text-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center justify-center"
+            className="bg-gray-200  hover:bg-gray-300 w-full text-center  text-gray-700 px-6 py-3 rounded-lg shadow-md flex items-center justify-center"
           >
             <img
               src="https://img.icons8.com/color/48/google-logo.png"
@@ -277,7 +277,7 @@ const RegisterPage = () => {
         </div>
         {/* Already Have an Account */}
         <div className="text-center mt-6">
-          <p className="text-gray-500">
+          <p className="text-gray-500 ">
             Already have an account?{" "}
             <Link to="/login" className="text-blue-600 hover:underline">
               Login Here

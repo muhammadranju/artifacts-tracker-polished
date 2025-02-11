@@ -90,18 +90,20 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100 flex items-center justify-center lg:px-0 px-3">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 dark:from-slate-900 via-white dark:via-slate-800 to-purple-100 dark:to-slate-900  flex items-center justify-center lg:px-0 px-3">
       <Helmet>
         <title>Login Page | Historical Artifacts</title>
       </Helmet>
-      <div className="bg-white shadow-2xl rounded-lg max-w-lg w-full p-8 sm:p-12">
+      <div className="bg-white dark:bg-slate-900 shadow-2xl rounded-lg max-w-lg w-full p-8 sm:p-12">
         {/* Logo */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-extrabold text-gray-800">
+          <h1 className="text-3xl font-extrabold text-gray-800 dark:text-white">
             Welcome Back to{" "}
             <span className="text-blue-600">Artifacts Tracker</span>
           </h1>
-          <p className="text-gray-500 mt-2">Login to continue exploring.</p>
+          <p className="text-gray-500 dark:text-slate-400 mt-2">
+            Login to continue exploring.
+          </p>
         </div>
 
         {/* Login Form */}
@@ -110,7 +112,7 @@ const Login = () => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium dark:text-gray-200 text-gray-700"
             >
               Email Address<span className="text-red-600">*</span>
             </label>
@@ -120,7 +122,7 @@ const Login = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-2 w-full px-4 py-3 dark:bg-slate-800 dark:text-gray-200 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
@@ -128,7 +130,7 @@ const Login = () => {
           <div className="mb-6 relative">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-gray-700 dark:text-gray-200"
             >
               Password<span className="text-red-600">*</span>
             </label>
@@ -138,7 +140,7 @@ const Login = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="Enter your password"
-              className="mt-2 w-full px-4 py-3 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-2 w-full px-4 py-3 dark:bg-slate-800 dark:text-gray-200 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
             <button
               type="button"
