@@ -49,29 +49,29 @@ const ArtifactCards = () => {
               {artifacts?.slice(0, 6)?.map((artifact) => (
                 <div
                   key={artifact?._id}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
+                  className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition"
                 >
                   <img
                     src={artifact?.imageUrl}
                     alt="Artifact"
                     className="rounded-lg mb-4 w-full h-64 object-cover"
                   />
-                  <h3 className="text-2xl font-semibold text-gray-800">
+                  <h3 className="text-2xl font-semibold dark:text-slate-100 text-gray-800">
                     {artifact?.artifactName}
                   </h3>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 dark:text-slate-200 mt-2">
                     {artifact?.historicalContext.length > 50
                       ? artifact?.historicalContext.slice(0, 120) + "..."
                       : artifact?.historicalContext}
                   </p>
                   <div className="flex justify-between items-center mt-4">
-                    <span className="text-gray-700 font-medium flex items-center gap-x-2">
+                    <span className="text-gray-700 dark:text-slate-100 font-medium flex items-center gap-x-2">
                       <SlLike />
                       {artifact?.likes}
                     </span>
                     <Link
                       to={`/artifact/${artifact?.slug}`}
-                      className="bg-gradient-to-r from-blue-500 to-blue-800 text-white px-4 py-2 rounded-md hover:opacity-90"
+                      className="bg-gradient-to-r from-blue-500 to-blue-800 dark:text-slate-100 text-white px-4 py-2 rounded-md hover:opacity-90"
                     >
                       View Details
                     </Link>
