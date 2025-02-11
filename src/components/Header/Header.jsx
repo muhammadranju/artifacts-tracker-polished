@@ -79,7 +79,7 @@ const Header = () => {
                     </li>
                     <li>
                       <a>My Profile</a>
-                      <ul className="p-2 space-y-1 w-48">
+                      <ul className="p-2 space-y-1 w-48 ">
                         <li>
                           <NavLink to="/my-artifacts">My Artifacts</NavLink>
                         </li>
@@ -142,7 +142,7 @@ const Header = () => {
                       <summary className="text-gray-700 dark:text-gray-300">
                         My Profile
                       </summary>
-                      <ul className="p-2 space-y-1 w-48">
+                      <ul className="p-2 space-y-1 w-48 dark:text-gray-300 dark:bg-slate-800">
                         <li>
                           <NavLink to="/my-artifacts">My Artifacts</NavLink>
                         </li>
