@@ -34,11 +34,9 @@ const ArtifactCards = () => {
             create history.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-5 gap-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:gap-5 gap-5 ">
           {loading ? (
             <>
-              <CardsSkeleton />
-              <CardsSkeleton />
               <CardsSkeleton />
               <CardsSkeleton />
               <CardsSkeleton />
@@ -46,7 +44,7 @@ const ArtifactCards = () => {
             </>
           ) : (
             <>
-              {artifacts?.slice(0, 6)?.map((artifact) => (
+              {artifacts?.slice(0, 4)?.map((artifact) => (
                 <div
                   key={artifact?._id}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
