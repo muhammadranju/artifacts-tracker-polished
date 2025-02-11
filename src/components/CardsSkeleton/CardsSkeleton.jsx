@@ -53,46 +53,46 @@ export const CardsSkeleton3 = () => {
 export const CardsSkeletonDetails = () => {
   return (
     <>
-      <div className="max-w-5xl w-full bg-gray-200 rounded-lg shadow-xl overflow-hidden animate-pulse">
+      <div className="max-w-5xl w-full bg-gray-200 dark:bg-slate-800 rounded-lg shadow-xl overflow-hidden animate-pulse">
         {/* Image Section */}
-        <div className="w-full h-64 bg-gray-400 relative"></div>
+        <div className="w-full h-64 bg-gray-400 dark:bg-slate-600 relative"></div>
         {/* Content Section */}
         <div className="p-8">
-          <div className="h-8 bg-gray-400 rounded w-1/2 my-4" />
-          <div className="h-4 bg-gray-400 rounded w-full mb-2" />
-          <div className="h-4 bg-gray-400 rounded w-4/5" />
+          <div className="h-8 bg-gray-400 dark:bg-slate-600 rounded w-1/2 my-4" />
+          <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-full mb-2" />
+          <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-4/5" />
         </div>
         {/* Metadata Section */}
         <div className="px-8 py-6 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
           <div>
-            <div className="h-4 bg-gray-400 rounded w-1/3 mb-2" />
-            <div className="h-6 bg-gray-400 rounded w-1/2" />
+            <div className="h-4 bg-gray-400 dark:bg-slate-600 rounded w-1/3 mb-2" />
+            <div className="h-6 bg-gray-400 dark:bg-slate-600 rounded w-1/2" />
           </div>
         </div>
         {/* Actions Section */}
         <div className="px-8 py-6 border-t border-gray-200 flex justify-between items-center">
-          <div className="px-6 py-2 h-6 w-24 bg-gray-400 rounded-md"></div>
-          <div className="px-6 py-2 h-6 w-24 bg-gray-400 rounded-md"></div>
+          <div className="px-6 py-2 h-6 w-24 bg-gray-400 dark:bg-slate-600 rounded-md"></div>
+          <div className="px-6 py-2 h-6 w-24 bg-gray-400 dark:bg-slate-600 rounded-md"></div>
         </div>
       </div>
     </>
