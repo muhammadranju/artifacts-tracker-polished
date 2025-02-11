@@ -92,7 +92,7 @@ const AddArtifact = () => {
   // console.log(formData);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-20 bg-white rounded-lg lg:shadow-lg mb-20 ">
+    <div className="max-w-4xl mx-auto p-6 py-20  bg-white dark:bg-slate-800 rounded-lg lg:shadow-lg  ">
       <Helmet>
         <title>Add Artifact Page | Historical Artifacts</title>
       </Helmet>
@@ -104,7 +104,7 @@ const AddArtifact = () => {
         <div>
           <label
             htmlFor="artifactName"
-            className="block text-gray-700 font-medium"
+            className="block text-gray-700 dark:text-slate-100 font-medium"
           >
             Artifact Name<span className="text-red-600">*</span>
           </label>
@@ -113,14 +113,17 @@ const AddArtifact = () => {
             id="artifactName"
             value={formData.artifactName}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter artifact name"
           />
         </div>
 
         {/* Artifact Image URL */}
         <div>
-          <label htmlFor="imageUrl" className="block text-gray-700 font-medium">
+          <label
+            htmlFor="imageUrl"
+            className="block text-gray-700 dark:text-slate-100 font-medium"
+          >
             Artifact Image URL<span className="text-red-600">*</span>
           </label>
           <input
@@ -128,7 +131,7 @@ const AddArtifact = () => {
             id="imageUrl"
             value={formData.imageUrl}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter valid image URL"
           />
         </div>
@@ -137,7 +140,7 @@ const AddArtifact = () => {
         <div>
           <label
             htmlFor="artifactType"
-            className="block text-gray-700 font-medium"
+            className="block text-gray-700 dark:text-slate-100 font-medium"
           >
             Artifact Type<span className="text-red-600">*</span>
           </label>
@@ -145,7 +148,7 @@ const AddArtifact = () => {
             id="artifactType"
             value={formData.artifactType}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option>Select Artifact Type</option>
             <option value="Tools">Tools</option>
@@ -172,7 +175,7 @@ const AddArtifact = () => {
         <div>
           <label
             htmlFor="historicalContext"
-            className="block text-gray-700 font-medium"
+            className="block text-gray-700 dark:text-slate-100 font-medium"
           >
             Historical Context<span className="text-red-600">*</span>
           </label>
@@ -180,7 +183,7 @@ const AddArtifact = () => {
             id="historicalContext"
             value={formData.historicalContext}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter historical context of the artifact"
             rows="4"
           />
@@ -192,7 +195,7 @@ const AddArtifact = () => {
           <div className="w-full">
             <label
               htmlFor="createdAt"
-              className="block text-gray-700 font-medium"
+              className="block text-gray-700 dark:text-slate-100 font-medium"
             >
               Created At<span className="text-red-600">*</span>
             </label>
@@ -201,7 +204,7 @@ const AddArtifact = () => {
               id="createdAt"
               value={formData.createdAt}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g., 100 BC"
             />
           </div>
@@ -210,7 +213,7 @@ const AddArtifact = () => {
           <div className="w-full">
             <label
               htmlFor="discoveredAt"
-              className="block text-gray-700 font-medium"
+              className="block text-gray-700 dark:text-slate-100 font-medium"
             >
               Discovered At<span className="text-red-600">*</span>
             </label>
@@ -219,7 +222,7 @@ const AddArtifact = () => {
               id="discoveredAt"
               value={formData.discoveredAt}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="e.g., 1799"
             />
           </div>
@@ -230,7 +233,7 @@ const AddArtifact = () => {
           <div className="w-full">
             <label
               htmlFor="discoveredBy"
-              className="block text-gray-700 font-medium"
+              className="block text-gray-700 dark:text-slate-100 font-medium"
             >
               Discovered By<span className="text-red-600">*</span>
             </label>
@@ -239,7 +242,7 @@ const AddArtifact = () => {
               id="discoveredBy"
               value={formData.discoveredBy}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter name of the person who discovered"
             />
           </div>
@@ -248,7 +251,7 @@ const AddArtifact = () => {
           <div className="w-full">
             <label
               htmlFor="presentLocation"
-              className="block text-gray-700 font-medium"
+              className="block text-gray-700 dark:text-slate-100 font-medium"
             >
               Present Location<span className="text-red-600">*</span>
             </label>
@@ -257,7 +260,7 @@ const AddArtifact = () => {
               id="presentLocation"
               value={formData.presentLocation}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 "
               placeholder="Where is the artifact located now?"
             />
           </div>
@@ -266,24 +269,24 @@ const AddArtifact = () => {
         {/* Logged-In User Info (Read-Only) */}
         <div className="flex justify-between">
           <div>
-            <label className="block text-gray-700 font-medium">
+            <label className="block text-gray-700 dark:text-slate-100 font-medium">
               Added By (Name)
             </label>
             <input
               type="text"
               value={user?.displayName}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-slate-700 cursor-not-allowed"
               readOnly
             />
           </div>
           <div>
-            <label className="block text-gray-700 font-medium">
+            <label className="block text-gray-700 dark:text-slate-100 font-medium">
               Added By (Email)
             </label>
             <input
               type="email"
               value={user?.email}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 cursor-not-allowed"
+              className="w-full px-4 py-2 border border-gray-300 dark:bg-slate-700  text-slate-900 dark:text-slate-100 dark:border-gray-500  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-slate-700  cursor-not-allowed"
               readOnly
             />
           </div>
