@@ -8,7 +8,7 @@ const Root = () => {
     <div>
       <ScrollToTop />
       <Header />
-      <div className="min-h-[calc(100vh-429px)] bg-white dark:bg-slate-900 py-10">
+      <div className="min-h-[calc(100vh-429px)] bg-white dark:bg-slate-900 ">
         <Outlet />
       </div>
       <Footer />

@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 export const Newsletter = () => {
   return (
-    <div className="px-4 pt-10 pb-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
+    <div className="px-4 pt-10 pb-2 mx-auto sm:max-w-xl md:max-w-full dark:text-slate-100  lg:max-w-screen-xl md:px-24 lg:px-8 ">
       <div className="max-w-2xl mx-auto sm:max-w-xl md:max-w-2xl">
         <div className="text-center">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider dark:text-slate-100 text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Subscribe to our newsletter
               </p>
             </div>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight dark:text-slate-100  text-gray-900 sm:text-4xl md:mx-auto">
               <span className="relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
@@ -39,7 +39,7 @@ export const Newsletter = () => {
               </span>{" "}
               newsletter
             </h2>
-            <p className="text-base text-gray-700 md:text-lg">
+            <p className="text-base dark:text-slate-100  text-gray-700 md:text-lg">
               The newsletter is the best way to stay up to date with our latest
               updates and exclusive content.
             </p>
@@ -49,7 +49,7 @@ export const Newsletter = () => {
               placeholder="Email"
               required=""
               type="text"
-              className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+              className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 dark:bg-slate-200  dark:text-sky-900 bg-white border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
             />
             <button
               type="submit"
@@ -58,7 +58,7 @@ export const Newsletter = () => {
               Subscribe
             </button>
           </div>
-          <p className="max-w-md mx-auto mb-10 text-xs text-gray-600 sm:text-sm md:mb-16">
+          <p className="max-w-md mx-auto mb-10 text-xs dark:text-slate-100  text-gray-600 sm:text-sm md:mb-16">
             By subscribing, you agree to our{" "}
             <Link to="/" className="text-deep-purple-accent-400">
               Terms of Service
